@@ -4,3 +4,4 @@ A software engineering project, matching faculty/educators to courses being taug
 ## Team and Roles:
 
 - Vedant Jadhav : Scrum master, Developer
+- Krishna Prashanth Thummanapelly: Developer
