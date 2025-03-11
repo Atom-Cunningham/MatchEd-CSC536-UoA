@@ -6,3 +6,4 @@ A software engineering project, matching faculty/educators to courses being taug
 - Vedant Jadhav : Scrum master, Developer
 - Krishna Prashanth Thummanapelly : Developer
 - Adam Cunningham: Project Owner
+- Ramya Ramachandran: Developer
