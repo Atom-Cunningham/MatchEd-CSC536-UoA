@@ -23,7 +23,7 @@ func main() {
 	jsons := GetJson(records)
 	fmt.Println(string(jsons))
 
-	//writeExpectedOutput(filename, jsons)
+	writeExpectedOutput(filename, jsons)
 }
 
 // grabs the second run command arg as filename string
