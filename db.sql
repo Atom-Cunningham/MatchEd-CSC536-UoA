@@ -4,6 +4,8 @@ CREATE USER match_user WITH PASSWORD 'swifty';
 GRANT match_rw TO match_user;
 
 CREATE DATABASE match_db WITH OWNER = match_rw;
+
+\connect match_db;
 CREATE SCHEMA match_schema;
 
 CREATE TABLE match_schema.user (
