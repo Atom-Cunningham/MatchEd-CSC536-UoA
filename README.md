@@ -6,3 +6,9 @@ A software engineering project, matching faculty/educators to courses being taug
 - Vedant Jadhav : Scrum master, Developer
 - Krishna Prashanth Thummanapelly : Developer
 - Ramya Ramachandran: Developer
+
+## Start the services
+    $ docker compose up
+
+## Database setup
+    $ psql -U postgres -h localhost -f db.sql
