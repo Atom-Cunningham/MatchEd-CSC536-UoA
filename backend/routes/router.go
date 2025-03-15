@@ -52,10 +52,6 @@ func SetupRouter() *gin.Engine {
 func setApiHandlers(r *gin.Engine) {
 	api := r.Group("/api")
 	{
-		// ping the server
-		api.GET("/ping", func(c *gin.Context) {
-			c.JSON(200, gin.H{"message": "pong"})
-		})
 
 		// People routes
 		people := api.Group("/people")
@@ -76,6 +72,14 @@ func setApiHandlers(r *gin.Engine) {
 			users.PUT("/:id", controllers.UpdateUser)
 			users.DELETE("/:id", controllers.DeleteUser)
 		}
+
+		// ping the server
+		// TODO, this should have a handler defined in controllers
+		// if you want to keep it
+		api.GET("/ping", func(c *gin.Context) {
+			c.JSON(200, gin.H{"message": "pong"})
+		})
+
 		/*
 			// Auth routes
 			auth := api.Group("/auth")

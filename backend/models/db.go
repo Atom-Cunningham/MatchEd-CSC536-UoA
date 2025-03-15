@@ -15,7 +15,7 @@ func InitDB() {
 	var err error
 	// Skip DB connection if it's not available yet
 	if isDatabaseAvailable() {
-		DB, err = gorm.Open("postgres", "user=username dbname=mydb sslmode=disable")
+		DB, err = gorm.Open("postgres", "user=username dbname=mydb sslmode=disable password=yourpassword")
 		if err != nil {
 			panic("failed to connect to database")
 		}
