@@ -6,12 +6,16 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
+// the name of the database.
+// call it from other packages with models.DB
+var DB *gorm.DB
+
 // TODO initialize gorm with postgres using real dbname
 func InitDB() {
 	var err error
 	// Skip DB connection if it's not available yet
 	if isDatabaseAvailable() {
-		_, err = gorm.Open("postgres", "user=username dbname=mydb sslmode=disable")
+		DB, err = gorm.Open("postgres", "user=username dbname=mydb sslmode=disable")
 		if err != nil {
 			panic("failed to connect to database")
 		}
