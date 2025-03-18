@@ -41,9 +41,6 @@ backend/build/
 
 # Ignore Docker-related files and directories
 *.log
-*.dockerignore
-Dockerfile
-docker-compose.yml
 *.swp
 .idea/
 .vscode/

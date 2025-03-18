@@ -14,7 +14,7 @@ func GetAllPeople(c *gin.Context) {
 	var people []models.Person
 
 	// Fetch people from database
-	// db.Find(&people)
+	// models.DB.Find(&people)
 
 	c.JSON(http.StatusOK, people)
 }
@@ -23,9 +23,8 @@ func GetAllPeople(c *gin.Context) {
 func GetPersonById(c *gin.Context) {
 	// id := c.Param("id")
 	var person models.Person
-
 	// Fetch person from database
-	// result := db.First(&person, id)
+	// result := models.DB.First(&person, id)
 	// if result.Error != nil {
 	//    c.JSON(http.StatusNotFound, gin.H{"error": "Person not found"})
 	//    return
@@ -44,7 +43,7 @@ func CreatePerson(c *gin.Context) {
 	}
 
 	// Save to database
-	// db.Create(&newPerson)
+	// models.DB.Create(&newPerson)
 
 	c.JSON(http.StatusCreated, newPerson)
 }
@@ -55,7 +54,7 @@ func UpdatePerson(c *gin.Context) {
 	//id := c.Param("id") // Get the person ID from the request URL
 
 	// Fetch the existing person from the database (mock example)
-	// if err := db.First(&person, id).Error; err != nil {
+	// if err := models.DB.First(&person, id).Error; err != nil {
 	//     c.JSON(http.StatusNotFound, gin.H{"error": "Person not found"})
 	//     return
 	// }
@@ -67,7 +66,7 @@ func UpdatePerson(c *gin.Context) {
 	}
 
 	// Save the updated person in the database
-	// db.Save(&person)
+	// models.DB.Save(&person)
 
 	c.JSON(http.StatusOK, gin.H{"message": "Person updated successfully", "person": person})
 }
@@ -78,13 +77,13 @@ func DeletePerson(c *gin.Context) {
 
 	// Fetch the existing person from the database (mock example)
 	// var person models.Person
-	// if err := db.First(&person, id).Error; err != nil {
+	// if err := models.DB.First(&person, id).Error; err != nil {
 	//     c.JSON(http.StatusNotFound, gin.H{"error": "Person not found"})
 	//     return
 	// }
 
 	// Delete the person from the database
-	// db.Delete(&person)
+	// models.DB.Delete(&person)
 
 	c.JSON(http.StatusOK, gin.H{"message": "Person deleted successfully"})
 }
