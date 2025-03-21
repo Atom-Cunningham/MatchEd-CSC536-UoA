@@ -35,6 +35,7 @@ frontend/.env.development
 frontend/.env.production
 
 # Ignore go dependencies and build artifacts in backend directory
+backend/.env
 backend/vendor/
 backend/bin/
 backend/build/
