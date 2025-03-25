@@ -7,3 +7,9 @@ A software engineering project, matching faculty/educators to courses being taug
 - Krishna Prashanth Thummanapelly : Developer
 - Ramya Ramachandran: Developer
 - Adam Cunningham: Product Owner, Developer
+
+## Start the services
+    $ docker compose up
+
+## Database setup
+    $ psql -U postgres -h localhost -f db.sql
