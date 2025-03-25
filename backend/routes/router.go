@@ -24,7 +24,7 @@ func SetupRouter() *gin.Engine {
 	r.Use(gin.Logger())
 	r.Use(gin.Recovery())
 
-	// API routes
+	// "/api" routes
 	setApiHandlers(r)
 
 	// Serve static files from the React app build directory in production
